@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $primary_font;
+    
+}
+header{
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    // overflow: hidden;
+    .logo{
+        padding: 0px 10px;
+    }
+    ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+
+        li>:not(.dropdown_option){
+            display: inline;
+
+        }
+        li{
+            vertical-align: sub;
+            margin: 10px 10px;
+            transition:  0.3s ease;
+            &:hover{
+                color: $text_color2;
+            }
+            a{
+            transition:  0.3s ease;
+                text-decoration: none;
+                color: $text_color;
+                &:hover{
+                    color: $text_color2;
+                }
+            }
+        }
+        .dropdown{
+            cursor: pointer;    
+           .dropdown_list{
+            // transition:  0.4s linear;
+
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.2s ease-in-out;
+        }
+           &:hover .dropdown_list {
+             max-height: 100px;
+            //  transition:  .5s ease;
+            opacity: 1;
+            visibility: visible;
+             width: 100%;
+             
+           }
+           
+        }
+       
+        
+    }
+    .right_options{
+        min-width: 120px;
+        display: flex;
+        justify-content: space-between;
+        i{
+            font-size: 18px;
+          }
+    }
+  
+ 
+}
+.hamburger{
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: $text_color2;
+    i{
+     font-size: 22px;
+     cursor: pointer;
+
+    }
+}
+
+@media screen  and (max-width:920px){
+    nav{
+        
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        li .dropdown_option,ul,.right_options{
+            display: none;
+        }
+         li{
+            margin: 14px;
+
+         }
+         li:not(.dropdown_option){
+            border-bottom: 1px solid #eaeaea;
+
+         }
+        .responsive_on{
+            display: block;
+            padding: 5px;
+            background-color: $burger_menu_bg_color;
+            .clicked,.clicked_options{
+                display: block;
+              }
+          }
+          
+    }
+    .hamburger{
+        display: block;
+    }
+
+}
