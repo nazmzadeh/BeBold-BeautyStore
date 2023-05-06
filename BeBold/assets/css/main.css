@@ -81,6 +81,7 @@ nav .right_options {
   min-width: 120px;
   display: flex;
   justify-content: space-between;
+  font-weight: bold;
 }
 nav .right_options i {
   font-size: 18px;
