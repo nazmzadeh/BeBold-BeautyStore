@@ -6,9 +6,21 @@
 }
 
 header {
-  position: relative;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    height: 70px;
+    background-color: $main_color;
 }
-
+header.is-sticky {
+    position: sticky;
+    box-shadow: 0 5px 16px $box_shadow_color;
+    padding:10px 0;
+    background-color: $menu_bg_color;
+    animation: slideDown 0.35s ease-out;
+  }
 nav {
   display: flex;
   justify-content: space-between;
@@ -21,12 +33,14 @@ nav {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-
+ 
     li:not(.dropdown_option) {
       position: relative;
       text-decoration: none;
       transition: 0.3s ease;
-
+      width: 144px;
+      margin: 10px 0px;
+      text-align: center;
       &::before {
         content: "";
         position: absolute;
@@ -74,13 +88,19 @@ nav {
 
     .dropdown {
       cursor: pointer;
-
+      background-color: $main_color;
+      border-radius: 5px;
+      text-align: center;
+      overflow: hidden;
       .show {
         display: block;
       }
 
       ul {
         display: none;
+        flex-direction: column;
+        width: 130px;
+        height: 110px;
 
         li {
           transition: 0.3s ease;
@@ -150,6 +170,7 @@ nav {
 
 @media screen and (max-width: 920px) {
   nav {
+
     ul,
     .right_options {
       display: none;
@@ -162,6 +183,8 @@ nav {
     ul.responsive {
       li {
         margin: 14px;
+        background: $menu_bg_color;
+        text-align: left;
       }
 
       li:not(.dropdown_option) {
@@ -172,16 +195,138 @@ nav {
     .responsive_on {
       display: block;
       padding: 5px;
-      background-color: $burger_menu_bg_color;
+      background-color: $menu_bg_color;
+    .dropdown{
+    text-align: left;  
 
-      .clicked,
-      .clicked_options {
-        display: block;
-      }
+    }
     }
   }
 
   .hamburger {
     display: block;
   }
+}
+@keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+.hero_container{
+    min-height: 722px;
+    .transition-transform{
+        transition-duration: 1.8s;
+        transition-delay: 1s;
+        .blue{
+            height: 100%;
+        }
+        .carousel_item_summary{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 0px 30px;
+            max-width: 1400px;
+            height: 100%;
+            font-family:$secondary_font;
+            color: $main_color;
+            width: 720px;
+            margin-left: 15%;
+            h6{
+                font-size: 13px;
+            }
+            h1{
+                font-size: 60px;
+                line-height: 1em;
+            }
+            p{
+                font-size: 23px;
+                line-height: 1.4em;
+            }
+            button{
+                font-size: 15px;
+                width: 142px;
+                padding: 15px 30px;
+                background-color: $main_color;
+                color: $text_color;
+                font-weight: 600;
+                transition: all .3s linear;
+                margin-top: 10px;
+                &:hover{
+                    color: $text_color2;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1290px) and (min-width:881px){
+    #hero{
+        img{
+          height: auto;
+        }
+        .carousel_item_summary{
+              h6{
+                font-size: 8px;
+            }
+            h1{
+                font-size: 40px;
+                line-height: 1em;
+            }
+            p{
+                font-size: 18px;
+                line-height: 1.4em;
+            }
+            button{
+                font-size: 13px;
+                width: 142px;
+                padding: 15px 30px;
+                background-color: $main_color;
+                color: $text_color;
+                font-weight: 600;
+                transition: all .3s linear;
+                margin-top: 10px;
+                &:hover{
+                    color: $text_color2;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 880px) {
+    #hero{
+        img{
+          height: auto;
+        }
+        .carousel_item_summary{
+            width: 80%;
+            padding: initial;
+              h6{
+                font-size: 6px;
+            }
+            h1{
+                font-size: 22px;
+            }
+            p{
+                font-size: 10px;
+            }
+            button{
+                font-size: 8px;
+                width: 70px;
+                padding: 5px 10px;
+                background-color: $main_color;
+                color: $text_color;
+                font-weight: 600;
+                transition: all .3s linear;
+                margin-top: 10px;
+                &:hover{
+                    color: $text_color2;
+                }
+            }
+        }
+    }
 }

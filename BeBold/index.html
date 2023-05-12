@@ -11,12 +11,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Marcellus&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/main.css">
     <title>Be Bold</title>
 </head>
 
 <body>
-    <div class="container">
+    <div class="myContainer">
         <header>
             <nav>
                 <div class="logo">
@@ -60,20 +61,48 @@
             <div class="hamburger">
                 <svg class="ham hamRotate ham1 hamburger_icon" viewBox="0 0 100 100"">
                     <path
-                          class="line top"
-                          d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
-                    <path
-                          class="line middle"
-                          d="m 30,50 h 40" />
-                    <path
-                          class="line bottom"
-                          d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
-                  </svg>
+                          class=" line top"
+                    d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+                <path class="line middle" d="m 30,50 h 40" />
+                <path class="line bottom"
+                    d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+                </svg>
             </div>
         </header>
+        <section id="hero">
+
+            <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96 hero_container">
+                    <div class="hidden duration-1000 linear" data-carousel-item>
+                        <img src="./assets/images/hero.jpg"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="carousel_img">
+                            <div class="carousel_item_summary">
+                                <h6>NEW IN TOWN</h6>
+                                <h1>The New Beauty Collection</h1>
+                                <p>This new collection brings with it the most exciting lorem ipsum dolor sit amet.</p>
+                                <button>SHOP NOW</button>
+                            </div>
+                            
+                    </div>
+                    <div class="hidden duration-1000 linear" data-carousel-item>
+                        <img src="./assets/images/hero2.jpg"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 blue" alt="carousel_img">
+                            <div class="carousel_item_summary">
+                                <h6>NEW COLLECTION</h6>
+                                <h1>The beauty collection that makes all the difference!</h1>
+                                <p>Aliquam vulputate, nunc vitae suscipit aliquet, libero arcu hendrerit sapien.</p>
+                                <button>SHOP NOW</button>
+                            </div>
+                          
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </div>
 
     <script src="./assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 </body>
 
 </html>

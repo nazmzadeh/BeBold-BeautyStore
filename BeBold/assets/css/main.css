@@ -1,4 +1,4 @@
-.container {
+.myContainer {
   padding: 20px 20px;
 }
 
@@ -11,6 +11,20 @@
 
 header {
   position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  height: 70px;
+  background-color: white;
+}
+
+header.is-sticky {
+  position: sticky;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  background-color: #f9f9f9;
+  animation: slideDown 0.35s ease-out;
 }
 
 nav {
@@ -29,6 +43,9 @@ nav ul li:not(.dropdown_option) {
   position: relative;
   text-decoration: none;
   transition: 0.3s ease;
+  width: 144px;
+  margin: 10px 0px;
+  text-align: center;
 }
 nav ul li:not(.dropdown_option)::before {
   content: "";
@@ -67,12 +84,19 @@ nav ul li a:hover {
 }
 nav ul .dropdown {
   cursor: pointer;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  overflow: hidden;
 }
 nav ul .dropdown .show {
   display: block;
 }
 nav ul .dropdown ul {
   display: none;
+  flex-direction: column;
+  width: 130px;
+  height: 110px;
 }
 nav ul .dropdown ul li {
   transition: 0.3s ease;
@@ -136,6 +160,8 @@ nav .right_options i {
   }
   nav ul.responsive li {
     margin: 14px;
+    background: #f9f9f9;
+    text-align: left;
   }
   nav ul.responsive li:not(.dropdown_option) {
     border-bottom: 1px solid #eaeaea;
@@ -145,11 +171,128 @@ nav .right_options i {
     padding: 5px;
     background-color: #f9f9f9;
   }
-  nav .responsive_on .clicked,
-  nav .responsive_on .clicked_options {
-    display: block;
+  nav .responsive_on .dropdown {
+    text-align: left;
   }
   .hamburger {
     display: block;
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.hero_container {
+  min-height: 722px;
+}
+.hero_container .transition-transform {
+  transition-duration: 1.8s;
+  transition-delay: 1s;
+}
+.hero_container .transition-transform .blue {
+  height: 100%;
+}
+.hero_container .transition-transform .carousel_item_summary {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0px 30px;
+  max-width: 1400px;
+  height: 100%;
+  font-family: "Marcellus", serif;
+  color: white;
+  width: 720px;
+  margin-left: 15%;
+}
+.hero_container .transition-transform .carousel_item_summary h6 {
+  font-size: 13px;
+}
+.hero_container .transition-transform .carousel_item_summary h1 {
+  font-size: 60px;
+  line-height: 1em;
+}
+.hero_container .transition-transform .carousel_item_summary p {
+  font-size: 23px;
+  line-height: 1.4em;
+}
+.hero_container .transition-transform .carousel_item_summary button {
+  font-size: 15px;
+  width: 142px;
+  padding: 15px 30px;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  transition: all 0.3s linear;
+  margin-top: 10px;
+}
+.hero_container .transition-transform .carousel_item_summary button:hover {
+  color: rgb(226, 168, 178);
+}
+
+@media screen and (max-width: 1290px) and (min-width: 881px) {
+  #hero img {
+    height: auto;
+  }
+  #hero .carousel_item_summary h6 {
+    font-size: 8px;
+  }
+  #hero .carousel_item_summary h1 {
+    font-size: 40px;
+    line-height: 1em;
+  }
+  #hero .carousel_item_summary p {
+    font-size: 18px;
+    line-height: 1.4em;
+  }
+  #hero .carousel_item_summary button {
+    font-size: 13px;
+    width: 142px;
+    padding: 15px 30px;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    transition: all 0.3s linear;
+    margin-top: 10px;
+  }
+  #hero .carousel_item_summary button:hover {
+    color: rgb(226, 168, 178);
+  }
+}
+@media screen and (max-width: 880px) {
+  #hero img {
+    height: auto;
+  }
+  #hero .carousel_item_summary {
+    width: 80%;
+    padding: initial;
+  }
+  #hero .carousel_item_summary h6 {
+    font-size: 6px;
+  }
+  #hero .carousel_item_summary h1 {
+    font-size: 22px;
+  }
+  #hero .carousel_item_summary p {
+    font-size: 10px;
+  }
+  #hero .carousel_item_summary button {
+    font-size: 8px;
+    width: 70px;
+    padding: 5px 10px;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    transition: all 0.3s linear;
+    margin-top: 10px;
+  }
+  #hero .carousel_item_summary button:hover {
+    color: rgb(226, 168, 178);
   }
 }/*# sourceMappingURL=main.css.map */
