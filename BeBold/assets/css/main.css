@@ -6,6 +6,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -170,6 +173,7 @@ nav .right_options i {
     display: block;
     padding: 5px;
     background-color: #f9f9f9;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
   }
   nav .responsive_on .dropdown {
     text-align: left;
@@ -237,21 +241,24 @@ nav .right_options i {
 }
 
 @media screen and (max-width: 1290px) and (min-width: 881px) {
-  #hero img {
+  #hero .hero_container {
+    min-height: 522px;
+  }
+  #hero .hero_container img {
     height: auto;
   }
-  #hero .carousel_item_summary h6 {
+  #hero .hero_container .carousel_item_summary h6 {
     font-size: 8px;
   }
-  #hero .carousel_item_summary h1 {
+  #hero .hero_container .carousel_item_summary h1 {
     font-size: 40px;
     line-height: 1em;
   }
-  #hero .carousel_item_summary p {
+  #hero .hero_container .carousel_item_summary p {
     font-size: 18px;
     line-height: 1.4em;
   }
-  #hero .carousel_item_summary button {
+  #hero .hero_container .carousel_item_summary button {
     font-size: 13px;
     width: 142px;
     padding: 15px 30px;
@@ -261,28 +268,32 @@ nav .right_options i {
     transition: all 0.3s linear;
     margin-top: 10px;
   }
-  #hero .carousel_item_summary button:hover {
+  #hero .hero_container .carousel_item_summary button:hover {
     color: rgb(226, 168, 178);
   }
 }
 @media screen and (max-width: 880px) {
-  #hero img {
+  #hero .hero_container {
+    min-height: 422px;
+  }
+  #hero .hero_container img {
     height: auto;
   }
-  #hero .carousel_item_summary {
+  #hero .hero_container .carousel_item_summary {
     width: 80%;
     padding: initial;
+    gap: 6px;
   }
-  #hero .carousel_item_summary h6 {
+  #hero .hero_container .carousel_item_summary h6 {
     font-size: 6px;
   }
-  #hero .carousel_item_summary h1 {
+  #hero .hero_container .carousel_item_summary h1 {
     font-size: 22px;
   }
-  #hero .carousel_item_summary p {
+  #hero .hero_container .carousel_item_summary p {
     font-size: 10px;
   }
-  #hero .carousel_item_summary button {
+  #hero .hero_container .carousel_item_summary button {
     font-size: 8px;
     width: 70px;
     padding: 5px 10px;
@@ -292,7 +303,142 @@ nav .right_options i {
     transition: all 0.3s linear;
     margin-top: 10px;
   }
-  #hero .carousel_item_summary button:hover {
+  #hero .hero_container .carousel_item_summary button:hover {
     color: rgb(226, 168, 178);
+  }
+}
+#slick {
+  margin-top: 20px;
+}
+#slick .slick_item {
+  border: 1px solid rgb(212, 208, 208);
+  margin: 0px 10px;
+}
+#slick .slick-dots {
+  position: static;
+  margin-top: 30px;
+}
+
+#trending {
+  margin-top: 40px;
+  padding-top: 50px;
+}
+#trending .titles {
+  font-family: "Marcellus", serif;
+  text-align: center;
+}
+#trending .titles h6 {
+  font-size: 13px;
+}
+#trending .titles h2 {
+  font-size: 60px;
+  line-height: 1em;
+}
+#trending .cards {
+  display: flex;
+  justify-content: space-evenly;
+  height: auto;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+#trending .card {
+  position: relative;
+  height: auto;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+}
+#trending .card img {
+  width: 100%;
+  transition: transform 0.2s;
+  height: 450px;
+}
+#trending .card img:hover {
+  transform: scale(1.05);
+}
+#trending .card .cart_icon {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  background-color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+}
+#trending .card .cart_icon:hover .add_to_cart_text {
+  opacity: 1;
+  visibility: visible;
+}
+#trending .card .cart_icon span {
+  position: absolute;
+  left: -72px;
+  font-size: 12px;
+  background: black;
+  color: white;
+  padding: 3px 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s linear;
+}
+#trending .card .cart_icon i {
+  font-size: 19px;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+#trending .card .sale {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  background-color: white;
+  border-radius: 20px;
+  width: 50px;
+  height: 27px;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+}
+#trending .card .sale span {
+  position: absolute;
+  top: 1px;
+  right: 9px;
+}
+#trending .card .stars {
+  margin-top: 20px;
+}
+#trending .card .product_name {
+  font-family: "Marcellus", serif;
+}
+#trending .card .price {
+  font-weight: 700;
+}
+#trending .card .previous_price {
+  text-decoration: line-through;
+  color: gray;
+}
+
+@media screen and (max-width: 1642px) {
+  #trending .cards {
+    justify-content: center;
+    gap: 25px;
+  }
+  #trending .cards .card {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 1210px) {
+  #trending .titles h6 {
+    font-size: 8px;
+  }
+  #trending .titles h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 765px) {
+  #trending .cards .card {
+    width: 300px;
+  }
+  #trending .cards .card img {
+    height: 350px;
   }
 }/*# sourceMappingURL=main.css.map */
