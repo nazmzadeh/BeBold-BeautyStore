@@ -23,6 +23,7 @@
 </head>
 
 <body>
+    <div class="sidebar_overlay"></div>
     <div class="myContainer">
         <header>
             <nav>
@@ -55,11 +56,16 @@
                     <span class="account">
                         <i class="fa-solid fa-user"></i>
                     </span>
-                    <div class="card">
-                        <span>$0.00 </span>
-                        <span>
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </span>
+                    <div class="cart">
+                        <div class="total">
+                            <span>$0.00 </span>
+                        </div>
+                        <div class="cart_icon">
+                            <span>
+                                <i class="fa-solid fa-basket-shopping"></i>
+                                <span class="count count_products" > 0 </span>
+                            </span>
+                        </div>
                     </div>
                 </div>
 
@@ -75,193 +81,217 @@
                 </svg>
             </div>
         </header>
-        <section id="hero">
+        <div class="sideCartMenu">
+            <div class="top">
+                <span>Shopping Cart</span>
+                <button type="button" class="close">
+                    <svg class="ast-mobile-svg ast-close-svg" fill="currentColor" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z">
+                        </path>
+                    </svg>
+                </button>
+            </div>    
+            <div class="main">
+                <p>No products in the cart.</p>
+            </div>  
+            <div class="footer">
+                <button>CONTINUE SHOPPING</button>
+            </div>  
+        </div>
+        <main>
+            <section id="hero">
 
-            <div id="default-carousel" class="relative w-full" data-carousel="slide">
-                <div class="relative h-56 overflow-hidden rounded-lg md:h-96 hero_container">
-                    <div class="hidden duration-1000 linear" data-carousel-item>
-                        <img src="./assets/images/hero.jpg"
-                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                            alt="carousel_img">
-                        <div class="carousel_item_summary">
-                            <h6>NEW IN TOWN</h6>
-                            <h1>The New Beauty Collection</h1>
-                            <p>This new collection brings with it the most exciting lorem ipsum dolor sit amet.</p>
-                            <button>SHOP NOW</button>
+                <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                    <div class="relative h-56 overflow-hidden rounded-lg md:h-96 hero_container">
+                        <div class="hidden duration-1000 linear" data-carousel-item>
+                            <img src="./assets/images/hero.jpg"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="carousel_img">
+                            <div class="carousel_item_summary">
+                                <h6>NEW IN TOWN</h6>
+                                <h1>The New Beauty Collection</h1>
+                                <p>This new collection brings with it the most exciting lorem ipsum dolor sit amet.</p>
+                                <button>SHOP NOW</button>
+                            </div>
+    
                         </div>
-
-                    </div>
-                    <div class="hidden duration-1000 linear" data-carousel-item>
-                        <img src="./assets/images/hero2.jpg"
-                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 blue"
-                            alt="carousel_img">
-                        <div class="carousel_item_summary">
-                            <h6>NEW COLLECTION</h6>
-                            <h1>The beauty collection that makes all the difference!</h1>
-                            <p>Aliquam vulputate, nunc vitae suscipit aliquet, libero arcu hendrerit sapien.</p>
-                            <button>SHOP NOW</button>
+                        <div class="hidden duration-1000 linear" data-carousel-item>
+                            <img src="./assets/images/hero2.jpg"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 blue"
+                                alt="carousel_img">
+                            <div class="carousel_item_summary">
+                                <h6>NEW COLLECTION</h6>
+                                <h1>The beauty collection that makes all the difference!</h1>
+                                <p>Aliquam vulputate, nunc vitae suscipit aliquet, libero arcu hendrerit sapien.</p>
+                                <button>SHOP NOW</button>
+                            </div>
+    
                         </div>
-
                     </div>
                 </div>
-            </div>
-
-        </section>
-        <section id="slick" class="slick_carousel">
-            <div class="slick_item">
-                <img src="./assets/images/logo-008.png" alt="slick_item_img">
-            </div>
-            <div class="slick_item">
-                <img src="./assets/images/logo-007.png" alt="slick_item_img">
-            </div>
-            <div class="slick_item">
-                <img src="./assets/images/logo-006.png" alt="slick_item_img">
-            </div>
-            <div class="slick_item">
-                <img src="./assets/images/logo-005.png" alt="slick_item_img">
-            </div>
-            <div class="slick_item">
-                <img src="./assets/images/logo-004.png" alt="slick_item_img">
-            </div>
-            <div class="slick_item">
-                <img src="./assets/images/logo-003.png" alt="slick_item_img">
-            </div>
-            <div class="slick_item">
-                <img src="./assets/images/logo-002.png" alt="slick_item_img">
-            </div>
-            <div class="slick_item">
-                <img src="./assets/images/logo-001.png" alt="slick_item_img">
-            </div>
-            <div class="slick_item">
-                <img src="./assets/images/logo-001.png" alt="slick_item_img">
-            </div>
-            <div class="slick_item">
-                <img src="./assets/images/logo-008.png" alt="slick_item_img">
-            </div>
-            <div class="slick_item">
-                <img src="./assets/images/logo-007.png" alt="slick_item_img">
-            </div>
-        </section>
-        <section id="trending">
-            <div class="titles">
-                <h6>POPULAR PRODUCTS</h6>
-                <h2>Trending Now</h2>
-            </div>
-            <div class="cards">
-                <div class="card">
-                    <a href="#">
-                        <img src="./assets/images/product-04-a-400x488.jpg" alt="card_img">
-                        <span class="sale">
-                            <span>Sale!</span>
-                        </span>
-                        <span class="cart_icon">
-                            <span class="add_to_cart_text">Add to cart</span>
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </span>
-                    </a>
-                    <div class="stars">
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
+    
+            </section>
+            <section id="slick" class="slick_carousel">
+                <div class="slick_item">
+                    <img src="./assets/images/logo-008.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-007.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-006.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-005.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-004.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-003.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-002.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-001.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-001.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-008.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-007.png" alt="slick_item_img">
+                </div>
+            </section>
+            <section id="trending">
+                <div class="titles">
+                    <h6>POPULAR PRODUCTS</h6>
+                    <h2>Trending Now</h2>
+                </div>
+                <div class="cards">
+                    <div class="card" data-id="1">
+                        <a href="#">
+                            <img src="./assets/images/product-04-a-400x488.jpg" alt="card_img">
+                            <span class="sale">
+                                <span>Sale!</span>
+                            </span>
+                            <button type="button" class="cart_icon" id="card_button">
+                                <span class="add_to_cart_text">Add to cart</span>
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                        </a>
+                        <div class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" class="product_name">
+                            <span>Product Name 1</span>
+                        </a>
+                        <div class="price">
+                            <span class="previous_price">$75.00</span>
+                            <span class="current_price">$59.00</span>
+                        </div>
                     </div>
-                    <a href="#"  class="product_name">
-                        <span>Product Name 1</span>
-                    </a>
-                    <div class="price">
-                        <span class="previous_price">$75.00</span>
-                        <span class="current_price">$59.00</span>
+                    <div class="card" data-id="2">
+                        <a href="#">
+                            <img src="./assets/images/product-14-a-300x366.jpg" alt="card_img">
+                            <span class="sale">
+                                <span>Sale!</span>
+                            </span>
+                            <button type="button" class="cart_icon" id="card_button">
+                                <span class="add_to_cart_text">Add to cart</span>
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                        </a>
+                        <div class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" class="product_name">
+                            <span>Product Name 10</span>
+                        </a>
+                        <div class="price">
+                            <span class="previous_price">$75.00</span>
+                            <span class="current_price">$59.00</span>
+                        </div>
+                    </div>
+                    <div class="card" data-id="3">
+                        <a href="#">
+                            <img src="./assets/images/product-09-a-300x366.jpg" alt="card_img">
+    
+                            <span class="sale">
+                                <span>Sale!</span>
+                            </span>
+                            <button type="button" class="cart_icon" id="card_button">
+                                <span class="add_to_cart_text">Add to cart</span>
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                        </a>
+                        <div class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" class="product_name">
+                            <span>Product Name 11</span>
+                        </a>
+                        <div class="price">
+                            <span class="previous_price">$75.00</span>
+                            <span class="current_price">$59.00</span>
+                        </div>
+                    </div>
+                    <div class="card" data-id="4">
+                        <a href="#">
+                            <img src="./assets/images/product-10-a-300x366.jpg" alt="card_img">
+    
+                            <span class="sale">
+                                <span>Sale!</span>
+                            </span>
+                            <button type="button" class="cart_icon" id="card_button">
+                                <span class="add_to_cart_text">Add to cart</span>
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                        </a>
+                        <div class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" class="product_name">
+                            <span>Product Name 12</span>
+                        </a>
+                        <div class="price">
+                            <span class="previous_price">$75.00</span>
+                            <span class="current_price">$59.00</span>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <a href="#">
-                        <img src="./assets/images/product-14-a-300x366.jpg" alt="card_img">
-                        <span class="sale">
-                            <span>Sale!</span>
-                        </span>
-                        <span class="cart_icon">
-                            <span class="add_to_cart_text">Add to cart</span>
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </span>
-                    </a>
-                    <div class="stars">
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </div>
-                    <a href="#"  class="product_name">
-                        <span>Product Name 10</span>
-                    </a>
-                    <div class="price">
-                        <span class="previous_price">$75.00</span>
-                        <span class="current_price">$59.00</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <a href="#">
-                        <img src="./assets/images/product-09-a-300x366.jpg" alt="card_img">
-
-                        <span class="sale">
-                            <span>Sale!</span>
-                        </span>
-                        <span class="cart_icon">
-                            <span class="add_to_cart_text">Add to cart</span>
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </span>
-                    </a>
-                    <div class="stars">
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </div>
-                    <a href="#"  class="product_name">
-                        <span>Product Name 11</span>
-                    </a>
-                    <div class="price">
-                        <span class="previous_price">$75.00</span>
-                        <span class="current_price">$59.00</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <a href="#">
-                        <img src="./assets/images/product-10-a-300x366.jpg" alt="card_img">
-
-                        <span class="sale">
-                            <span>Sale!</span>
-                        </span>
-                        <span class="cart_icon">
-                            <span class="add_to_cart_text">Add to cart</span>
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </span>
-                    </a>
-                    <div class="stars">
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </div>
-                    <a href="#" class="product_name" >
-                        <span>Product Name 12</span>
-                    </a>
-                    <div class="price">
-                        <span class="previous_price">$75.00</span>
-                        <span class="current_price">$59.00</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
+     
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
         integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script type="text/javascript" src="./assets/js/cart.js"></script>
+    <script src="./assets/js/sideCart.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 
