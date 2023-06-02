@@ -19,16 +19,16 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/main.css">
-    <title>Be Bold</title>
+    <title>Home - Be Bold</title>
 </head>
 
 <body>
-    <div class="sidebar_overlay"></div>
+    <!-- <div class="sidebar_overlay"></div> -->
     <div class="myContainer">
         <header>
             <nav>
                 <div class="logo">
-                    <a href="№">
+                    <a href="index.html">
                         <img src="./assets/images/logo-regular.png" alt="logo">
                     </a>
                 </div>
@@ -57,15 +57,18 @@
                         <i class="fa-solid fa-user"></i>
                     </span>
                     <div class="cart">
-                        <div class="total">
-                            <span>$0.00 </span>
-                        </div>
-                        <div class="cart_icon">
-                            <span>
-                                <i class="fa-solid fa-basket-shopping"></i>
-                                <span class="count count_products" > 0 </span>
+                        <a href="cart.html" class="cart_link">
+                            <span class="total">
+                                <span>$0.00 </span>
                             </span>
-                        </div>
+                            <span class="cart_icon">
+                                <span>
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                    <span class="count count_products"> 0 </span>
+                                </span>
+                            </span>
+                        </a>
+
                     </div>
                 </div>
 
@@ -81,7 +84,7 @@
                 </svg>
             </div>
         </header>
-        <div class="sideCartMenu">
+        <!-- <div class="sideCartMenu">
             <div class="top">
                 <span>Shopping Cart</span>
                 <button type="button" class="close">
@@ -92,17 +95,27 @@
                         </path>
                     </svg>
                 </button>
-            </div>    
+            </div>
             <div class="main">
-                <p>No products in the cart.</p>
-            </div>  
+                <p class="emptyCart">No products in the cart.</p>
+            </div>
+
             <div class="footer">
-                <button>CONTINUE SHOPPING</button>
-            </div>  
-        </div>
+                <div class="full_cart_infos">
+                    <div class="total_price">
+                        <span>Subtotal:</span>
+                        <span>$118.00</span>
+                    </div>
+                    <a href="cart.html">VIEW CART</a>
+                    <button>CHECKOUT</button>
+                </div>
+
+                <button class="emptyCartBtn">CONTINUE SHOPPING</button>
+            </div>
+        </div> -->
         <main>
             <section id="hero">
-
+    
                 <div id="default-carousel" class="relative w-full" data-carousel="slide">
                     <div class="relative h-56 overflow-hidden rounded-lg md:h-96 hero_container">
                         <div class="hidden duration-1000 linear" data-carousel-item>
@@ -112,7 +125,8 @@
                             <div class="carousel_item_summary">
                                 <h6>NEW IN TOWN</h6>
                                 <h1>The New Beauty Collection</h1>
-                                <p>This new collection brings with it the most exciting lorem ipsum dolor sit amet.</p>
+                                <p>This new collection brings with it the most exciting lorem ipsum dolor sit amet.
+                                </p>
                                 <button>SHOP NOW</button>
                             </div>
     
@@ -196,8 +210,8 @@
                             <span>Product Name 1</span>
                         </a>
                         <div class="price">
-                            <span class="previous_price">$75.00</span>
-                            <span class="current_price">$59.00</span>
+                            <span class="previous_price">75</span>
+                            <span class="current_price">59</span>
                         </div>
                     </div>
                     <div class="card" data-id="2">
@@ -222,8 +236,8 @@
                             <span>Product Name 10</span>
                         </a>
                         <div class="price">
-                            <span class="previous_price">$75.00</span>
-                            <span class="current_price">$59.00</span>
+                            <span class="previous_price">75</span>
+                            <span class="current_price">59</span>
                         </div>
                     </div>
                     <div class="card" data-id="3">
@@ -249,8 +263,8 @@
                             <span>Product Name 11</span>
                         </a>
                         <div class="price">
-                            <span class="previous_price">$75.00</span>
-                            <span class="current_price">$59.00</span>
+                            <span class="previous_price">75</span>
+                            <span class="current_price">59</span>
                         </div>
                     </div>
                     <div class="card" data-id="4">
@@ -276,21 +290,23 @@
                             <span>Product Name 12</span>
                         </a>
                         <div class="price">
-                            <span class="previous_price">$75.00</span>
-                            <span class="current_price">$59.00</span>
+                            <span class="previous_price">75</span>
+                            <span class="current_price">59</span>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
-     
     </div>
+    
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
         integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-    <script type="text/javascript" src="./assets/js/cart.js"></script>
+    <script type="text/javascript" src="./assets/js/addToCart.js"></script>
+    <script src="./assets/js/cartInside.js"></script>
     <script src="./assets/js/sideCart.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
