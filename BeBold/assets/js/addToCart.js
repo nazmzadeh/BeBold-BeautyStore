@@ -16,7 +16,7 @@ buttons.forEach(btn => {
     btn.addEventListener("click",function (e) {
         e.preventDefault();
         let Id=this.parentElement.parentElement.getAttribute("data-id");
-        let price=this.parentElement.parentElement.lastElementChild.lastElementChild.innerText;
+        let price=this.parentElement.parentElement.lastElementChild.lastElementChild.lastElementChild.innerText;
         let name=this.parentElement.nextElementSibling.nextElementSibling.firstElementChild.innerText;
         let image=this.parentElement.firstElementChild.src;
         createStorage();
@@ -44,17 +44,5 @@ function getCart(Id,price,name,image) {
     }
     return cart;
 }
-
-
-
-// const user={
-//     fullname:"Naz Mzadeh",
-//     age:20,
-//     work:"Front-end developer"
-// }
-// // localStorage.setItem("name","Naz");
-// // localStorage.setItem("user",JSON.stringify(user));
-// localStorage.setItem("user",JSON.parse(user));
-
 
     

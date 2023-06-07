@@ -360,10 +360,7 @@ nav {
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      gap: 10px;
-      padding: 0px 30px;
-      max-width: 1400px;
-      height: 100%;
+      gap: 10px;     
       font-family: $secondary_font;
       color: $main_color;
       width: 720px;
@@ -481,8 +478,8 @@ nav {
   }
 }
 
-#trending {
-  margin-top: 40px;
+.cards_section {
+  margin-top: 42px;
   padding-top: 50px;
   .titles {
     font-family: $secondary_font;
@@ -491,7 +488,7 @@ nav {
       font-size: 13px;
     }
     h2 {
-      font-size: 60px;
+      font-size: 55px;
       line-height: 1em;
     }
   }
@@ -507,6 +504,7 @@ nav {
     height: auto;
     // min-width: calc(calc(100% / 4) - 20px);
     box-shadow: 0 5px 16px $box_shadow_color;
+    padding-bottom: 8px;
 
     img {
       // min-width: 400px;
@@ -568,12 +566,15 @@ nav {
     }
     .stars {
       margin-top: 20px;
+      padding: 0px 8px;
     }
     .product_name {
       font-family: $secondary_font;
+      padding: 0px 8px;
     }
     .price {
       font-weight: 700;
+      padding: 0px 8px;
     }
     .previous_price {
       text-decoration: line-through;
@@ -582,7 +583,7 @@ nav {
   }
 }
 @media screen and (max-width: 1642px) {
-  #trending {
+  .cards_section {
     .cards {
       justify-content: center;
       gap: 25px;
@@ -594,7 +595,7 @@ nav {
 }
 
 @media screen and (max-width: 1210px) {
-  #trending {
+  .cards_section {
     .titles {
       h6 {
         font-size: 8px;
@@ -606,12 +607,91 @@ nav {
   }
 }
 @media screen and (max-width: 765px) {
-  #trending {
+  .cards_section {
     .cards {
       .card {
         width: 300px;
         img {
           height: 350px;
+        }
+      }
+    }
+  }
+}
+
+#testimonials{
+  .myContainer{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 54px;
+    padding-top: 50px;
+    min-height: 750px;
+    h6{
+      color: $text_color3;
+      font-family: $secondary_font;
+
+    }
+    .divider{
+      height: 1px;
+      width: 50px;
+      background-color: $text_color2;
+  }
+    .summary{
+      padding-top: 27px;
+      h3{
+       font-size: 2.7rem;
+       line-height: 1em;
+       margin: 20px 0px;
+       font-family: $secondary_font;
+      }
+     
+    }
+    
+  }
+  .all_testimonials{
+    display: grid;
+    place-items: center;
+    i{
+      color: $star_color;
+    }
+    .testimonial{
+      height: 100%;
+      display: grid;
+      align-items:center;
+      align-content: space-evenly;
+    }
+  }
+  
+}
+
+@media (max-width:920px){
+  #testimonials{
+    .myContainer{
+      .summary{
+
+        h3{
+          font-size: 2.1rem;
+        }
+      }
+      h6{
+        font-size: 10px;
+      }
+      p{
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media (max-width:770px){
+  #testimonials{
+    .myContainer{
+      padding: 50px 20px;
+      display: block;
+      min-height: 600px;
+      .all_testimonials{
+        .testimonial{
+          min-height: 145px;
         }
       }
     }

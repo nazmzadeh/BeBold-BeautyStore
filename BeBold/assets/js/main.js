@@ -9,13 +9,6 @@ const toggleClass = "is-sticky";
 hamburger.onclick = () => {
     responsive.classList.toggle("responsive_on");
     hamburger.classList.toggle('active');
-    // if (hamburger.className="active") {
-    //   header.style.height="auto";
-        
-    // }else{
-    //   header.style.height="85px";
-
-    // }
 };
 dropdown.onclick = () => {
     dropdownList.classList.toggle("show");

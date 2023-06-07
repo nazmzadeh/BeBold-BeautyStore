@@ -3,6 +3,12 @@ let tbody = document.querySelector("tbody");
 let empty=document.querySelector(".empty");
 let cartItems = JSON.parse(localStorage.getItem("cart"));
 
+if (cartItems.length == 0) {
+    table.style.display="none";
+} else {
+    table.style.display="inline-table";
+    empty.style.display="none";
+}
 
 for (let i = 0; i < cartItems.length; i++) {
   let addedProduct = ` <tr id="${cartItems[i].id}">
@@ -43,27 +49,27 @@ for (let i = 0; i < cartItems.length; i++) {
   tbody.innerHTML += addedProduct;
 }
 
+function RemoveProduct(clickedItem) {
+    clickedItem.closest("tr").remove();
+    let cart= JSON.parse(localStorage.getItem("cart")) ;
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].id==clickedItem.parentElement.parentElement.id) {
+            cart.splice(i,1);
+            localStorage.setItem("cart",JSON.stringify(cart));
+            cartCount();
+        }
+        
+    }
+}
 
 let deleteIcons=document.querySelectorAll(".remove");
 
-deleteIcons.forEach((item)=>{
-    item.onclick=function () {
-        item.closest("tr").remove();
-        let cart= JSON.parse(localStorage.getItem("cart")) ;
-        for (let i = 0; i < cart.length; i++) {
-            if (cart[i].id==item.parentElement.parentElement.id) {
-                cart.splice(i,1);
-                localStorage.setItem("cart",JSON.stringify(cart));
-                cartCount();
-            }
-            
-        }
-    } 
-    if (!item) {
-        table.style.display="none";
-        empty.style.display="block";
-    }
-})
+    deleteIcons.forEach((item)=>{
+        item.onclick=function () {
+           RemoveProduct(item);
+        } ;
+    })
+
 
 
 let decreaseBtns=document.querySelectorAll(".decrease");
@@ -79,6 +85,9 @@ decreaseBtns.forEach((item)=>{
                 localStorage.setItem("cart",JSON.stringify(cart));
                 item.nextElementSibling.innerText=cart[i].count;
                 item.parentElement.parentElement.nextElementSibling.firstElementChild.innerText="$"+cart[i].count*cart[i].price;
+            }
+            if (cart[i].count==0) {
+              RemoveProduct(item);
             }
         }
     }
@@ -103,11 +112,3 @@ increaseBtns.forEach((item)=>{
     }
 });
 
-
-
-if (cartItems.length == 0) {
-    table.style.display="none";
-} else {
-    table.style.display="inline-table";
-    empty.style.display="none";
-}
