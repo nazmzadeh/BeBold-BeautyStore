@@ -555,13 +555,12 @@ nav .right_options div.cart .cart_icon .count {
 }
 .cards_section .titles h2 {
   font-size: 55px;
-  line-height: 1em;
 }
 .cards_section .cards {
   display: flex;
   justify-content: space-evenly;
   height: auto;
-  margin-top: 25px;
+  margin-top: 40px;
   flex-wrap: wrap;
 }
 .cards_section .card {
@@ -868,5 +867,71 @@ nav .right_options div.cart .cart_icon .count {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+}
+footer {
+  background-color: #F6EDF0;
+}
+footer .myContainer {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px;
+}
+footer h3 {
+  font-size: 1.88rem;
+  font-family: "Marcellus", serif;
+}
+footer input {
+  width: 475px;
+  height: 53px;
+  margin-top: 15px;
+  border: 0;
+}
+footer button {
+  background-color: black;
+  color: white;
+  padding: 15px 50px;
+  margin-top: 15px;
+  transition: 0.3s linear;
+}
+footer button:hover {
+  background-color: rgb(226, 168, 178);
+  color: white;
+}
+footer .footer_main {
+  border-top: 1px solid rgb(226, 168, 178);
+}
+footer .footer_main .footer_links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+}
+footer .footer_main .footer_links a:hover {
+  color: gray;
+  transition: 0.3s linear;
+}
+footer .footer_main .footer_links .soc_net_icon:hover {
+  color: rgb(226, 168, 178);
+  transition: 0.3s linear;
+}
+
+@media (max-width: 770px) {
+  footer input {
+    width: 100%;
+    margin-top: 15px;
+  }
+  footer button {
+    padding: 10px 30px;
+    width: 100%;
+    margin-top: 15px;
+  }
+  footer .myContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  footer .footer_main .footer_links {
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   }
 }/*# sourceMappingURL=main.css.map */
