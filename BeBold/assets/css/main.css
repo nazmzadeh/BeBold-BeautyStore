@@ -11,11 +11,32 @@
 
 h6 {
   font-size: 13px;
+  font-family: "Marcellus", serif;
 }
 
 h2 {
   font-size: 55px;
   line-height: 1em;
+}
+
+.divider {
+  height: 1px;
+  width: 50px;
+  background-color: rgb(226, 168, 178);
+}
+
+.shop_now_button {
+  font-size: 15px;
+  width: 142px;
+  padding: 15px 29px;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  transition: all 0.3s linear;
+  margin-top: 10px;
+}
+.shop_now_button:hover {
+  color: rgb(226, 168, 178);
 }
 
 .cartContainer {
@@ -441,19 +462,6 @@ nav .right_options div.cart .cart_icon .count {
   font-size: 23px;
   line-height: 1.4em;
 }
-.hero_container .transition-transform .carousel_item_summary button {
-  font-size: 15px;
-  width: 142px;
-  padding: 15px 30px;
-  background-color: white;
-  color: black;
-  font-weight: 600;
-  transition: all 0.3s linear;
-  margin-top: 10px;
-}
-.hero_container .transition-transform .carousel_item_summary button:hover {
-  color: rgb(226, 168, 178);
-}
 
 @media screen and (max-width: 1290px) and (min-width: 881px) {
   #hero .hero_container {
@@ -670,12 +678,6 @@ nav .right_options div.cart .cart_icon .count {
 }
 #testimonials .myContainer h6 {
   color: gray;
-  font-family: "Marcellus", serif;
-}
-#testimonials .myContainer .divider {
-  height: 1px;
-  width: 50px;
-  background-color: rgb(226, 168, 178);
 }
 #testimonials .myContainer .summary {
   padding-top: 27px;
@@ -718,6 +720,153 @@ nav .right_options div.cart .cart_icon .count {
     min-height: 600px;
   }
   #testimonials .myContainer .all_testimonials .testimonial {
-    min-height: 145px;
+    min-height: 200px;
+  }
+}
+#shop_now_parts {
+  display: flex;
+}
+#shop_now_parts .part {
+  padding: 10% 5%;
+  width: 50%;
+  height: 630px;
+  margin: 0px 10px;
+}
+#shop_now_parts .part .summary {
+  color: white;
+  font-family: "Marcellus", serif;
+  max-width: 425px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#shop_now_parts .part h3 {
+  font-size: 2.7rem;
+  line-height: 1em;
+}
+#shop_now_parts .part p {
+  font-size: 1.45rem;
+}
+#shop_now_parts .first {
+  background-image: url(https://websitedemos.net/be-bold-beauty-store-04/wp-content/uploads/sites/1117/2022/08/bg-001.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#shop_now_parts .second {
+  background-image: url(https://websitedemos.net/be-bold-beauty-store-04/wp-content/uploads/sites/1117/2022/08/bg-02.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1280px) {
+  #shop_now_parts .part {
+    height: 520px;
+  }
+  #shop_now_parts .part h3 {
+    font-size: 2.3rem;
+  }
+  #shop_now_parts .part p {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 900px) {
+  #shop_now_parts {
+    flex-wrap: wrap;
+  }
+  #shop_now_parts .part {
+    width: 100%;
+    margin: 20px 0px;
+  }
+}
+@media (max-width: 900px) {
+  #shop_now_parts .part {
+    height: 400px;
+  }
+  #shop_now_parts .part h3 {
+    font-size: 2rem;
+  }
+  #shop_now_parts .part p {
+    font-size: 1.1rem;
+  }
+  #shop_now_parts .part h6 {
+    font-size: 10px;
+  }
+}
+#why_choose_us {
+  padding: 75px 20px;
+}
+#why_choose_us .myContainer {
+  display: flex;
+  padding: 0;
+}
+#why_choose_us .myContainer .title {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+#why_choose_us .myContainer .card {
+  width: 25%;
+}
+#why_choose_us .myContainer .card h3 {
+  font-size: 1.45rem;
+  font-family: "Marcellus", serif;
+}
+#why_choose_us .myContainer .card i {
+  background-color: rgb(226, 168, 178);
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+}
+#why_choose_us .myContainer .card i:hover {
+  background-color: black;
+}
+#why_choose_us .myContainer .card .text {
+  margin-left: 15px;
+}
+#why_choose_us .myContainer .card .text p {
+  color: gray;
+}
+#why_choose_us .myContainer .reasons {
+  display: flex;
+  justify-content: center;
+}
+#why_choose_us .myContainer .reasons .reason {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 1135px) {
+  #why_choose_us .myContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #why_choose_us .myContainer .title {
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #why_choose_us .myContainer .card {
+    padding: 35px 0px;
+    width: 100%;
+  }
+}
+@media (max-width: 730px) {
+  #why_choose_us .myContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #why_choose_us .myContainer .card {
+    width: 100%;
+  }
+  #why_choose_us .myContainer .reasons {
+    flex-wrap: wrap;
+  }
+  #why_choose_us .myContainer .reasons .reason {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }/*# sourceMappingURL=main.css.map */
