@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Marcellus&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Home - Be Bold</title>
+</head>
+
+<body>
+    <!-- <div class="sidebar_overlay"></div> -->
+    <div class="main_container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./assets/images/logo-regular.png" alt="logo">
+                    </a>
+                </div>
+                <ul class="responsive">
+                    <li>
+                        <a href="shop-all.html">SHOP ALL</a>
+                    </li>
+                    <li class="dropdown">
+                        <span>CATEGORY </span>
+                        <i class="fa-solid fa-caret-down"></i>
+                        <ul class="dropdown_list">
+                            <li class="dropdown_option"><a href="#">MAKEUP</a></li>
+                            <li class="dropdown_option"><a href="#">SKINCARE</a></li>
+                            <li class="dropdown_option"><a href="#">HAIRCARE</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="#">CONTACT</a>
+                    </li>
+                </ul>
+                <div class="right_options">
+                    <span class="account">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <div class="cart">
+                        <a href="cart.html" class="cart_link">
+                            <span class="total">
+                                <span>$0.00 </span>
+                            </span>
+                            <span class="cart_icon">
+                                <span>
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                    <span class="count count_products"> 0 </span>
+                                </span>
+                            </span>
+                        </a>
+
+                    </div>
+                </div>
+
+            </nav>
+            <div class="hamburger">
+                <svg class="ham hamRotate ham1 hamburger_icon" viewBox="0 0 100 100"">
+                    <path
+                          class=" line top"
+                    d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+                <path class="line middle" d="m 30,50 h 40" />
+                <path class="line bottom"
+                    d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+                </svg>
+            </div>
+        </header>
+        <!-- <div class="sideCartMenu">
+            <div class="top">
+                <span>Shopping Cart</span>
+                <button type="button" class="close">
+                    <svg class="ast-mobile-svg ast-close-svg" fill="currentColor" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div class="main">
+                <p class="emptyCart">No products in the cart.</p>
+            </div>
+
+            <div class="footer">
+                <div class="full_cart_infos">
+                    <div class="total_price">
+                        <span>Subtotal:</span>
+                        <span>$118.00</span>
+                    </div>
+                    <a href="cart.html">VIEW CART</a>
+                    <button>CHECKOUT</button>
+                </div>
+
+                <button class="emptyCartBtn">CONTINUE SHOPPING</button>
+            </div>
+        </div> -->
+        <main>
+            <section id="hero">
+
+                <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                    <div class="relative h-56 overflow-hidden rounded-lg md:h-96 hero_container">
+                        <div class="hidden duration-1000 linear" data-carousel-item>
+                            <img src="./assets/images/hero.jpg"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="carousel_img">
+                            <div class="carousel_item_summary myContainer">
+                                <h6>NEW IN TOWN</h6>
+                                <h1>The New Beauty Collection</h1>
+                                <p>This new collection brings with it the most exciting lorem ipsum dolor sit amet.
+                                </p>
+                                <button class="shop_now_button">SHOP NOW</button>
+                            </div>
+
+                        </div>
+                        <div class="hidden duration-1000 linear" data-carousel-item>
+                            <img src="./assets/images/hero2.jpg"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 blue"
+                                alt="carousel_img">
+                            <div class="carousel_item_summary myContainer">
+                                <h6>NEW COLLECTION</h6>
+                                <h1>The beauty collection that makes all the difference!</h1>
+                                <p>Aliquam vulputate, nunc vitae suscipit aliquet, libero arcu hendrerit sapien.</p>
+                                <button class="shop_now_button">SHOP NOW</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section id="slick" class="slick_carousel">
+                <div class="slick_item">
+                    <img src="./assets/images/logo-008.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-007.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-006.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-005.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-004.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-003.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-002.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-001.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-001.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-008.png" alt="slick_item_img">
+                </div>
+                <div class="slick_item">
+                    <img src="./assets/images/logo-007.png" alt="slick_item_img">
+                </div>
+            </section>
+            <section id="trending" class="cards_section">
+                <div class="titles">
+                    <h6>POPULAR PRODUCTS</h6>
+                    <h2>Trending Now</h2>
+                </div>
+                <div class="cards">
+                    <div class="card" data-id="1">
+                        <a href="#">
+                            <img src="./assets/images/product-04-a-400x488.jpg" alt="card_img">
+                            <span class="sale">
+                                <span>Sale!</span>
+                            </span>
+                            <button type="button" class="cart_icon" id="card_button">
+                                <span class="add_to_cart_text">Add to cart</span>
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                        </a>
+                        <div class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" class="product_name">
+                            <span>Product Name 1</span>
+                        </a>
+                        <div class="price">
+                            <span class="previous_price">
+                                <span>$</span>
+                                <span>75</span>
+                            </span>
+                            <span class="current_price">
+                                <span>$</span>
+                                <span>59</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card" data-id="2">
+                        <a href="#">
+                            <img src="./assets/images/product-14-a-300x366.jpg" alt="card_img">
+                            <span class="sale">
+                                <span>Sale!</span>
+                            </span>
+                            <button type="button" class="cart_icon" id="card_button">
+                                <span class="add_to_cart_text">Add to cart</span>
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                        </a>
+                        <div class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" class="product_name">
+                            <span>Product Name 10</span>
+                        </a>
+                        <div class="price">
+                            <span class="previous_price">
+                                <span>$</span>
+                                <span>75</span>
+                            </span>
+                            <span class="current_price">
+                                <span>$</span>
+                                <span>59</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card" data-id="3">
+                        <a href="#">
+                            <img src="./assets/images/product-09-a-300x366.jpg" alt="card_img">
+
+                            <span class="sale">
+                                <span>Sale!</span>
+                            </span>
+                            <button type="button" class="cart_icon" id="card_button">
+                                <span class="add_to_cart_text">Add to cart</span>
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                        </a>
+                        <div class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" class="product_name">
+                            <span>Product Name 11</span>
+                        </a>
+                        <div class="price">
+                            <span class="previous_price">
+                                <span>$</span>
+                                <span>75</span>
+                            </span>
+                            <span class="current_price">
+                                <span>$</span>
+                                <span>59</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card" data-id="4">
+                        <a href="#">
+                            <img src="./assets/images/product-10-a-300x366.jpg" alt="card_img">
+
+                            <span class="sale">
+                                <span>Sale!</span>
+                            </span>
+                            <button type="button" class="cart_icon" id="card_button">
+                                <span class="add_to_cart_text">Add to cart</span>
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                        </a>
+                        <div class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" class="product_name">
+                            <span>Product Name 12</span>
+                        </a>
+                        <div class="price">
+                            <span class="previous_price">
+                                <span>$</span>
+                                <span>75</span>
+                            </span>
+                            <span class="current_price">
+                                <span>$</span>
+                                <span>59</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="best_selling" class="cards_section">
+                <div class="titles">
+                    <h6>SHOP</h6>
+                    <h2>Best Selling </h2>
+                </div>
+                <div class="cards">
+                    <div class="card" data-id="2">
+                        <a href="#">
+                            <img src="./assets/images/product-14-a-300x366.jpg" alt="card_img">
+                            <span class="sale">
+                                <span>Sale!</span>
+                            </span>
+                            <button type="button" class="cart_icon" id="card_button">
+                                <span class="add_to_cart_text">Add to cart</span>
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                        </a>
+                        <div class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" class="product_name">
+                            <span>Product Name 10</span>
+                        </a>
+                        <div class="price">
+                            <span class="previous_price">
+                                <span>$</span>
+                                <span>75</span>
+                            </span>
+                            <span class="current_price">
+                                <span>$</span>
+                                <span>59</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card" data-id="1">
+                        <a href="#">
+                            <img src="./assets/images/product-04-a-400x488.jpg" alt="card_img">
+                            <span class="sale">
+                                <span>Sale!</span>
+                            </span>
+                            <button type="button" class="cart_icon" id="card_button">
+                                <span class="add_to_cart_text">Add to cart</span>
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                        </a>
+                        <div class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" class="product_name">
+                            <span>Product Name 1</span>
+                        </a>
+                        <div class="price">
+                            <span class="previous_price">
+                                <span>$</span>
+                                <span>75</span>
+                            </span>
+                            <span class="current_price">
+                                <span>$</span>
+                                <span>59</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card" data-id="3">
+                        <a href="#">
+                            <img src="./assets/images/product-09-a-300x366.jpg" alt="card_img">
+
+                            <span class="sale">
+                                <span>Sale!</span>
+                            </span>
+                            <button type="button" class="cart_icon" id="card_button">
+                                <span class="add_to_cart_text">Add to cart</span>
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                        </a>
+                        <div class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" class="product_name">
+                            <span>Product Name 11</span>
+                        </a>
+                        <div class="price">
+                            <span class="previous_price">
+                                <span>$</span>
+                                <span>75</span>
+                            </span>
+                            <span class="current_price">
+                                <span>$</span>
+                                <span>59</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card" data-id="5">
+                        <a href="#">
+                            <img src="./assets/images/product-15-a-300x366.jpg" alt="card_img">
+
+                            <span class="sale">
+                                <span>Sale!</span>
+                            </span>
+                            <button type="button" class="cart_icon" id="card_button">
+                                <span class="add_to_cart_text">Add to cart</span>
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                        </a>
+                        <div class="stars">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" class="product_name">
+                            <span>Product Name 15</span>
+                        </a>
+                        <div class="price">
+                            <span class="previous_price">
+                                <span>$</span>
+                                <span>75</span>
+                            </span>
+                            <span class="current_price">
+                                <span>$</span>
+                                <span>59</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="testimonials">
+                <div class="myContainer">
+                    <div class="summary">
+                        <h6>JANE OLIVER</h6>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere...</h3>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="all_testimonials">
+                        <div class="testimonial">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere tincidunt
+                                purus, eu consectetur eros sodales nec. Maecenas ac erat pretium, ultricies nibh quis,
+                                mattis massa.</p>
+                            <h6>JAMES OLIVER</h6>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="testimonial">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere tincidunt
+                                purus, eu consectetur eros sodales nec. Maecenas ac erat pretium, ultricies nibh quis,
+                                mattis massa.</p>
+                            <h6>JAMES OLIVER</h6>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="testimonial">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere tincidunt
+                                purus, eu consectetur eros sodales nec. Maecenas ac erat pretium, ultricies nibh quis,
+                                mattis massa.</p>
+                            <h6>JAMES OLIVER</h6>
+                            <div class="divider"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="shop_now_parts">
+                <div class="part first">
+                    <div class="summary">
+                        <h6>NEW COLLECTIONS</h6>
+                        <h3>Awesome Makeup Kit Gift Sets</h3>
+                        <p>Find your unique style.</p>
+                        <button class="shop_now_button">SHOP NOW</button>
+                    </div>
+                </div>
+                <div class="part second">
+                    <div class="summary">
+                        <h6>NEW COLLECTIONS</h6>
+                        <h3>The Ultimate Skincare Regime</h3>
+                        <p>Find your unique style.</p>
+                        <button class="shop_now_button">SHOP NOW</button>
+                    </div>
+                </div>
+            </section>
+            <section id="why_choose_us">
+                <div class="myContainer">
+                    <div class="title card">
+                        <h6>WHY CHOOSE US</h6>
+                        <div class="divider"></div>
+
+                    </div>
+                    <div class="reasons">
+                        <div class="reason card">
+                            <div class="icon">
+                                <i aria-hidden="true" class="fas fa-shipping-fast"></i>
+                            </div>
+                            <div class="text">
+                                <h3>Fast Delivery</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                                    ullamcorper mattis.</p>
+                            </div>
+                        </div>
+                        <div class="reason card">
+                            <div class="icon">
+                                <i aria-hidden="true" class="fas fa-dolly"></i>
+                            </div>
+                            <div class="text">
+                                <h3>Free Shipping</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                                    ullamcorper mattis.</p>
+                            </div>
+                        </div>
+                        <div class="reason card">
+                            <div class="icon">
+                                <i aria-hidden="true" class="fas fa-arrow-left"></i>
+                            </div>
+                            <div class="text">
+                                <h3>Easy Returns</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                                    ullamcorper mattis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="subscribe">
+                <div class="myContainer">
+                    <h3>Subscribe to our newsletter</h3>
+                    <form>
+                        <input type="text" placeholder="Your email address..">
+                        <button>SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer_main">
+                <div class="myContainer">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="./assets/images/logo-regular.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="shop-all.html">Shop All</a></li>
+                            <li><a href="#">Makeup</a></li>
+                            <li><a href="#">Skin Care</a></li>
+                            <li><a href="#">Hair Care</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Refund Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                        <div class="social_networks">
+                            <a href="#" class="soc_net_icon">
+                                <i class="fa-brands fa-square-facebook"></i>
+                            </a>
+                            <a href="#" class="soc_net_icon">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#" class="soc_net_icon">
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script type="text/javascript" src="./assets/js/addToCart.js"></script>
+    <script src="./assets/js/sideCart.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

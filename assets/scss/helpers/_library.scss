@@ -1,0 +1,39 @@
+.main_container{
+    padding: 20px 20px;
+
+}
+.myContainer{
+    max-width: 1400px;
+    height: 100%;
+    padding: 0px 45px;
+    margin: 0 auto;
+
+}
+h6{
+    font-size: 13px;
+    font-family: $secondary_font;
+}
+h2{
+    font-size: 55px;
+    line-height: 1em
+}
+.divider{
+    height: 1px;
+    width: 50px;
+    background-color: $text_color2;
+} 
+
+.shop_now_button {
+    font-size: 15px;
+    width: 142px;
+    padding: 15px 29px;
+    background-color: $main_color;
+    color: $text_color;
+    font-weight: 600;
+    transition: all 0.3s linear;
+    margin-top: 10px;
+    &:hover {
+      color: $text_color2;
+    }
+  }
+
